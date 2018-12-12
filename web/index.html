@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejercicio Formulario</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="recursos/estilos.css"/>
+    </head>
+    <body>
+        <form action="/ManejoFormulariosHTML/Servlet" method="post" name="form1" onsubmit="return validarForma(this)">
+            <input type="hidden" name="oculto" value="valorOculto" />
+            
+            <table width="200" id="one-column-emphasis">
+                <caption>Formulario registro de Datos</caption>
+                <tr>
+                    <td class="oce-first">
+                        Usuario: (*)
+                    </td>
+                    <td>
+                        <input type="text" class="default" name="usuario" placeholder="Escribir Usuario" onfocus="this.select();" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Password: (*)
+                    </td>
+                    <td>
+                        <input type="password" class="default" name="password" onfocus="this.select();" placeholder="Escribir password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Tecnologías de Interés: (*)
+                    </td>
+                    <td>
+                        Java <input type="checkbox" name="tecnologia" value="java" />
+                        .Net <input type="checkbox" name="tecnologia" value="net" />
+                        PHP <input type="checkbox" name="tecnologia" value="php" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Género: (*)
+                    </td>
+                    <td>
+                        Hombre <input type="radio" name="genero" value="H" />
+                        Mujer <input type="radio" name="genero" value="M" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Ocupación: (*)
+                    </td>
+                    <td>
+                        <select name="ocupacion" class="default">
+                            <option value="">Seleccionar</option>
+                            <option value="1">Profesor</option>
+                            <option value="2">Ingeniero</option>
+                            <option value="3">Jubilado</option>
+                            <option value="4">Otro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Música Favorita:
+                    </td>
+                    <td>
+                        <select name="musica" multiple class="default">                            
+                            <option value="rock">Rock</option>
+                            <option value="pop">Pop</option>
+                            <option value="salsa">Salsa</option>
+                            <option value="merengue">Merengue</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="oce-first">
+                        Comentarios:
+                    </td>
+                    <td>
+                        <textarea name="comentarios" cols="30" rows="2" placeholder="Escribir un comentario..." onfocus="this.select();"></textarea>
+                    </td>
+                </tr>
+                <tr style="text-align: center;">
+                    <td>
+                        <input type="reset" value="Limpiar" class="default" />
+                    </td>
+                    <td>
+                        <input type="submit" value="Enviar" class="default" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script src="recursos/funciones.js"></script>
+    </body>
+</html>
